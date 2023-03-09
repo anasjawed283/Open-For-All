@@ -1,6 +1,6 @@
 .trail { /* className for the trail elements */
     position: absolute;
-    height: 6px; width: 6px;
-    border-radius: 3px;
+    height: 5px; width: 5px;
+    border-radius: 4px;
     background: teal;
   }
