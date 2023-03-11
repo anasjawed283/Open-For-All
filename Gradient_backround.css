@@ -1,0 +1,22 @@
+body {
+  animation: gMotion 10s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    #d600ff,
+    #fdf800,
+    #01f1ff,
+    #d600ff,
+    #fdf800
+  );
+  background-size: 400% 100%;
+}
+
+@keyframes gMotion {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
