@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  background: 
+    linear-gradient(#223333 66%, #112222);
+}
+
+.magnetic-cursor {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  margin-top: -26px;
+  z-index: 9999;
+  pointer-events: none;
+  
+  background:
+    linear-gradient(to right, gray 1px, transparent 1px) 0 0,
+    linear-gradient(to right, gray 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, gray 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, gray 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, gray 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, gray 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, gray 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, gray 1px, transparent 1px) 100% 100%;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
+}
+.magnetic-cursor.locked {
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+  transition-property: background, width, height, margin;
+  transition-duration: .1s;
+  background:
+    linear-gradient(to right, orange 2px, transparent 2px) 0 0,
+    linear-gradient(to right, orange 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, orange 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, orange 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, orange 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, orange 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, orange 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, orange 2px, transparent 2px) 100% 100%;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
+}
+
+.item-container {
+  width: 400px;
+  color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.item-container .cursor-attractor {
+  width: 36px;
+  height: 36px;
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+}
+.item-container .cursor-attractor div {
+  margin: auto;
+  text-align: center;
+}
+.item-container .cursor-attractor:hover div {
+  color: orange;
+}
