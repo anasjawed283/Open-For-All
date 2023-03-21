@@ -1,0 +1,15 @@
+.title {
+  text-align: center;
+  margin-top: 45vh;
+  color: #ff0063;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  /* border-radius: 50%; */
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
